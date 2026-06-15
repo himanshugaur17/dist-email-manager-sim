@@ -1,5 +1,5 @@
-package com.example.email.server;
+package com.example.cell;
 
-public interface EmailServer {
+public interface CellDataPlane {
     void sendEmail(String from, String to, String subject, String body);
 }
