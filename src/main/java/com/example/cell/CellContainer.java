@@ -1,5 +1,6 @@
 package com.example.cell;
 
+import java.util.Random;
 import java.util.TreeMap;
 
 import com.example.cell.db.PhysicalDbNode;
@@ -36,5 +37,11 @@ public class CellContainer implements CellControlPlane, CellDataPlane {
         } else {
             System.out.println(" Email from: " + from + " could not be sent.");
         }
+    }
+
+    @Override
+    public CellMetadata getCellMetadata() {
+        // TODO Auto-generated method stub
+        return new CellMetadata(new Random().nextInt(), new Random().nextInt(), "cell-" + new Random().nextInt());
     }
 }
